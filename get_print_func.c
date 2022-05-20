@@ -8,7 +8,7 @@
  */
 int (*get_print_func(const char *s, int index))(va_list, char *, unsigned int)
 {
-	print_t pr[] = {
+	print_a pt[] = {
 		{"c", print_chr}, {"s", print_str},
 		{"i", print_int}, {"d", print_int},
 		{"b", print_bnr}, {"u", print_unt},
@@ -39,11 +39,11 @@ int (*get_print_func(const char *s, int index))(va_list, char *, unsigned int)
 	int i = 0, j = 0, first_index;
 
 	first_index = index;
-	while (pr[i].type_arg)
+	while (pt[i].type_arg)
 	{
-		if (s[index] == pr[i].type_arg[j])
+		if (s[index] == pt[i].type_arg[j])
 		{
-			if (pr[i].type_arg[j + 1] != '\0')
+			if (pt[i].type_arg[j + 1] != '\0')
 				index++, j++;
 			else
 				break;
@@ -55,5 +55,5 @@ int (*get_print_func(const char *s, int index))(va_list, char *, unsigned int)
 			index = first_index;
 		}
 	}
-	return (pr[i].f);
+	return (pt[i].f);
 }
