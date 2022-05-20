@@ -3,30 +3,30 @@
 /**
  * fill_binary_array - prints decimal in binary
  * @binary: pointer to binary
- * @int_in: input number
- * @isneg: if input number is negative
+ * @intin: input number
+ * @is_it_neg: if input number is negative
  * @limit: size of the binary
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-char *fill_binary_array(char *binary, long int int_in, int isneg, int limit)
+char *fill_binary_array(char *binary, long int intin, int is_it_neg, int limit)
 {
 	int i;
 
 	for (i = 0; i < limit; i++)
 		binary[i] = '0';
 	binary[limit] = '\0';
-	for (i = limit - 1; int_in > 1; i--)
+	for (i = limit - 1; intin > 1; i--)
 	{
-		if (int_in == 2)
+		if (intin == 2)
 			binary[i] = '0';
 		else
-			binary[i] = (int_in % 2) + '0';
-		int_in /= 2;
+			binary[i] = (intin % 2) + '0';
+		intin /= 2;
 	}
-	if (int_in != 0)
+	if (intin != 0)
 		binary[i] = '1';
-	if (isneg)
+	if (is_it_neg)
 	{
 		for (i = 0; binary[i]; i++)
 			if (binary[i] == '0')
