@@ -5,7 +5,7 @@
  * @format: input string.
  *
  * Return: number of chars printed.
- * Team: Oyoyo and Nganga
+ * designed by WANDHE and NGANGA
  */
 int _printf(const char *format, ...)
 {
