@@ -6,9 +6,9 @@
  * Return: amount of identifiers.
  * designed by WANDHE and NGANGA
  */
-int ev_print_func(const char *s, int index)
+int ev_print_function(const char *s, int ind)
 {
-	print_t pr[] = {
+	print_a pt[] = {
 		{"c", print_chr}, {"s", print_str}, {"i", print_int},
 		{"d", print_int}, {"b", print_bnr}, {"u", print_unt},
 		{"o", print_oct}, {"x", print_hex}, {"X", print_upx},
@@ -30,13 +30,13 @@ int ev_print_func(const char *s, int index)
 	};
 	int i = 0, j = 0, first_index;
 
-	first_index = index;
-	while (pr[i].type_arg)
+	first_index = ind;
+	while (pt[i].type_arg)
 	{
-		if (s[index] == pr[i].type_arg[j])
+		if (s[ind] == pt[i].type_arg[j])
 		{
-			if (pr[i].type_arg[j + 1] != '\0')
-				index++, j++;
+			if (pt[i].type_arg[j + 1] != '\0')
+				ind++, j++;
 			else
 				break;
 		}
@@ -44,7 +44,7 @@ int ev_print_func(const char *s, int index)
 		{
 			j = 0;
 			i++;
-			index = first_index;
+			ind = first_index;
 		}
 	}
 	return (j);
