@@ -4,6 +4,7 @@
  * @s: argument indentifier
  * @index: index of argument identifier.
  * Return: amount of identifiers.
+ * designed by WANDHE and NGANGA
  */
 int ev_print_func(const char *s, int index)
 {

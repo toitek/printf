@@ -7,6 +7,7 @@
  * @isneg: if input number is negative
  * @limit: size of the binary
  * Return: number of chars printed.
+ * designed by WANDHE and NGANGA
  */
 char *fill_binary_array(char *binary, long int int_in, int isneg, int limit)
 {

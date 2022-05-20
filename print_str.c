@@ -6,6 +6,7 @@
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
  * Return: On success 1.
+ * designed by WANDHE and NGANGA
  */
 int print_str(va_list arguments, char *buf, unsigned int ibuf)
 {
