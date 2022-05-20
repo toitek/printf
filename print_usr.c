@@ -6,6 +6,7 @@
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
  * Return: number of chars printed
+ * designed by WANDHE and NGANGA
  */
 int print_usr(va_list arguments, char *buf, unsigned int ibuf)
 {

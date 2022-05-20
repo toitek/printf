@@ -8,6 +8,7 @@
  * in uppercase or lowercase letter.
  * @limit: size of hex
  * Return: binary array.
+ * designed by WANDHE and NGANGA
  */
 char *fill_hex_array(char *bnr, char *hex, int isupp, int limit)
 {

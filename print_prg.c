@@ -6,6 +6,7 @@
  * @buf: buffer pointer
  * @i: index for buffer pointer
  * Return: On success 1.
+ * designed by WANDHE and NGANGA
  */
 int print_prg(va_list a __attribute__((unused)), char *buf, unsigned int i)
 {
