@@ -26,7 +26,7 @@ int prinnoct(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	ibuf = handl_buf(buf, '0', ibuf);
 	binary = malloc(sizeof(char) * (32 + 1));
-	binary = fill_binary_array(binary, int_input, isnegative, 32);
+	binary = binary_array(binary, int_input, isnegative, 32);
 	octal = malloc(sizeof(char) * (11 + 1));
 	octal = fill_octal_array(binary, octal);
 	for (first_digit = i = count = 0; octal[i]; i++)
