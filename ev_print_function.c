@@ -13,7 +13,7 @@ int ev_print_function(const char *s, int ind)
 		{"s", print_str},
 		{"i", print_int},
 		{"d", print_int},
-		{"b", print_bnr},
+		{"b", binary_print},
 		{"u", print_unt},
 		{"o", print_oct},
 		{"x", print_hex},

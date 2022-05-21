@@ -1,32 +1,32 @@
 #include "main.h"
 
 /**
- * print_bnr - prints decimal in binary
+ * binary_print - prints decimal in binary
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int print_bnr(va_list arguments, char *buf, unsigned int ibuff)
+int binary_print(va_list arguments, char *buf, unsigned int ibuff)
 {
-	int int_input, count, i, first_one, isnegative;
+	int int_inp, count, i, first_one, negative;
 	char *binary;
 
-	int_input = va_arg(arguments, int);
-	isnegative = 0;
-	if (int_input == 0)
+	int_inp = va_arg(arguments, int);
+	negative = 0;
+	if (int_inp == 0)
 	{
 		ibuff = buffer_handler(buf, '0', ibuff);
 		return (1);
 	}
-	if (int_input < 0)
+	if (int_inp < 0)
 	{
-		int_input = (int_input * -1) - 1;
-		isnegative = 1;
+		int_inp = (int_inp * -1) - 1;
+		negative = 1;
 	}
 	binary = malloc(sizeof(char) * (32 + 1));
-	binary = binary_array(binary, int_input, isnegative, 32);
+	binary = binary_array(binary, int_inp, negative, 32);
 	first_one = 0;
 	for (count = i = 0; binary[i]; i++)
 	{
