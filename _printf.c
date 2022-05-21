@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 			{
-				print_buf(buffer, ibufff), free(buffer), va_end(arguments);
+				buffer_print(buffer, ibufff), free(buffer), va_end(arguments);
 				return (-1);
 			}
 			else
@@ -50,6 +50,6 @@ int _printf(const char *format, ...)
 		for (ibufff = len; ibufff > 1024; ibufff -= 1024)
 			;
 	}
-	print_buf(buffer, ibufff), free(buffer), va_end(arguments);
+	buffer_print(buffer, ibufff), free(buffer), va_end(arguments);
 	return (len);
 }

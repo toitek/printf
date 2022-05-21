@@ -12,7 +12,7 @@ unsigned int buffer_handler(char *buf, char c, unsigned int ibuff)
 {
 	if (ibuff == 1024)
 	{
-		print_buf(buf, ibuff);
+		buffer_print(buf, ibuff);
 		ibuff = 0;
 	}
 	buf[ibuff] = c;
