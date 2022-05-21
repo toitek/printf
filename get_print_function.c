@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * get_print_func - selects the correct function to perform the operation.
+ * get_print_function - selects the correct function to perform the operation.
  * @s: argument indentifier
  * @index: index for argument indentifier
  * Return: pointer to a function.
  * designed by WANDHE and NGANGA
  */
-int (*get_print_func(const char *s, int index))(va_list, char *, unsigned int)
+int (*get_print_function(const char *s, int index))(va_list, char *, unsigned int)
 {
 	print_a pt[] = {
 		{"c", print_chr}, {"s", print_str},

@@ -40,7 +40,7 @@
 .BI "int prinnupx(va_list arguments, char *buf, unsigned int ibuf);"
 .BI "int prinsint(va_list arguments, char *buf, unsigned int ibuf);"
 .PP
-.BI "int (*get_print_func(const char *s, int index))(va_list, char *, unsigned int);"
+.BI "int (*get_print_function(const char *s, int index))(va_list, char *, unsigned int);"
 .BI "int ev_print_func(const char *s, int index);"
 .PP
 .BI "unsigned int buffer_handler(char *buf, char c, unsigned int ibuf);"
