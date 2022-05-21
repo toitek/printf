@@ -60,9 +60,9 @@ char *short_octal_array(char *bnr, char *oct);
 char *fill_hex_array(char *bnr, char *hex, int isupp, int limit);
 =======
 char *binary_array(char *binary, long int int_in, int isneg, int limit);
-char *fill_octal_array(char *bnr, char *oct);
-char *fill_long_octal_array(char *bnr, char *oct);
-char *fill_short_oct_array(char *bnr, char *oct);
+char *octal_array(char *bnr, char *oct);
+char *long_octal_array(char *bnr, char *oct);
+char *short_octal_array(char *bnr, char *oct);
 char *hex_array(char *bnr, char *hex, int isupp, int limit);
 >>>>>>> 8d78987ee46ffe19112f5b778564604d0518c80c
 

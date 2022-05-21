@@ -47,9 +47,9 @@
 .BI "int print_buf(char *buf, unsigned int nbuf);"
 .PP
 .BI "char *binary_array(char *binary, long int int_in, int isneg, int limit);"
-.BI "char *fill_octal_array(char *bnr, char *oct);"
-.BI "char *fill_long_octal_array(char *bnr, char *oct);"
-.BI "char *fill_short_oct_array(char *bnr, char *oct);"
+.BI "char *octal_array(char *bnr, char *oct);"
+.BI "char *long_octal_array(char *bnr, char *oct);"
+.BI "char *short_octal_array(char *bnr, char *oct);"
 .BI "char *hex_array(char *bnr, char *hex, int isupp, int limit);"
 .PP
 .SH DESCRIPTION
