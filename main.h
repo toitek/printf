@@ -57,5 +57,12 @@ char *octal_array(char *bnr, char *oct);
 char *long_octal_array(char *bnr, char *oct);
 char *short_octal_array(char *bnr, char *oct);
 char *fill_hex_array(char *bnr, char *hex, int isupp, int limit);
+char *binary_array(char *binary, long int int_in, int isneg, int limit);
+char *octal_array(char *bnr, char *oct);
+char *long_octal_array(char *bnr, char *oct);
+char *short_octal_array(char *bnr, char *oct);
+char *hex_array(char *bnr, char *hex, int isupp, int limit);
+=======
+>>>>>>> 231b665c618ac604b865b4f488f46cb2109d3f7c
 
 #endif
