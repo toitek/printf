@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * ev_print_func - returns the amount of identifiers.
+ * iden_return_function- returns the amount of identifiers.
  * @s: argument indentifier
  * @ind: index of argument identifier.
  * Return: amount of identifiers.
