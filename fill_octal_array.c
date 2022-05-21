@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * fill_long_octal_array - calculates a long octal number
+ * fill_octal_array - writes the character c to stdout
  *
  * @bnr: array where is stored the binary.
  * @oct: array where is stored the octal.
@@ -8,17 +8,17 @@
  * Return: binary array.
  * designed by WANDHE and NGANGA
  */
-char *fill_long_octal_array(char *bnr, char *oct)
+char *fill_octal_array(char *bnr, char *oct)
 {
 	int opr, i, j, octal, limit;
 
-	oct[22] = '\0';
-	for (i = 63, octal = 21; i >= 0; i--, octal--)
+	oct[11] = '\0';
+	for (i = 31, octal = 10; i >= 0; i--, octal--)
 	{
-		if (i > 0)
+		if (i > 1)
 			limit = 4;
 		else
-			limit = 1;
+			limit = 2;
 		for (opr = 0, j = 1; j <= limit; j *= 2, i--)
 			opr = ((bnr[i] - '0') * j) + opr;
 		i++;
