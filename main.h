@@ -51,7 +51,7 @@ int prinsint(va_list arguments, char *buf, unsigned int ibuff);
 int (*get_print_function(const char *s, int index))(va_list, char *, unsigned int);
 int iden_return_function(const char *s, int ind);
 unsigned int buffer_handler(char *buf, char c, unsigned int ibuff);
-int print_buf(char *buf, unsigned int nbuf);
+int buffer_print(char *buf, unsigned int nbuf);
 char *binary_array(char *binary, long int int_in, int isneg, int limit);
 char *octal_array(char *bnr, char *oct);
 char *long_octal_array(char *bnr, char *oct);
