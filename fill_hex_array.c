@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * hex_array - writes the character c to stdout
+ * fill_hex_array - writes the character c to stdout
  *
  * @bnr: array where is stored the binary.
  * @hex: array where is stored the hexadecimal.
@@ -10,7 +10,7 @@
  * Return: binary array.
  * designed by WANDHE and NGANGA
  */
-char *hex_array(char *bnr, char *hex, int isupp, int limit)
+char *fill_hex_array(char *bnr, char *hex, int isupp, int limit)
 {
 	int op, i, j, toletter;
 
