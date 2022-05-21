@@ -46,11 +46,11 @@
 .BI "unsigned int handl_buf(char *buf, char c, unsigned int ibuf);"
 .BI "int print_buf(char *buf, unsigned int nbuf);"
 .PP
-.BI "char *fill_binary_array(char *binary, long int int_in, int isneg, int limit);"
+.BI "char *binary_array(char *binary, long int int_in, int isneg, int limit);"
 .BI "char *fill_octal_array(char *bnr, char *oct);"
 .BI "char *fill_long_octal_array(char *bnr, char *oct);"
 .BI "char *fill_short_oct_array(char *bnr, char *oct);"
-.BI "char *fill_hex_array(char *bnr, char *hex, int isupp, int limit);"
+.BI "char *hex_array(char *bnr, char *hex, int isupp, int limit);"
 .PP
 .SH DESCRIPTION
 The output function _printf() produce output according to a format. the function _printf converts the character strings that receives as argument and prints it on the standard output.
