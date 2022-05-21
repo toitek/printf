@@ -6,7 +6,7 @@
  * Return: amount of identifiers.
  * designed by WANDHE and NGANGA
  */
-int ev_print_function(const char *s, int ind)
+int iden_return_function(const char *s, int ind)
 {
 	print_a pt[] = {
 		{"c", print_chr},
