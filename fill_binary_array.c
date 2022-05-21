@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * binary_array - prints decimal in binary
+ * fill_binary_array - prints decimal in binary
  * @binary: pointer to binary
  * @intin: input number
  * @is_it_neg: if input number is negative
@@ -9,7 +9,7 @@
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-char *binary_array(char *binary, long int intin, int is_it_neg, int limit)
+char *fill_binary_array(char *binary, long int intin, int is_it_neg, int limit)
 {
 	int i;
 
