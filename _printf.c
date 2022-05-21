@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 				else
 				{
 					len += function(arguments, buffer, ibufff);
-					i += ev_print_function(format, i + 1);
+					i += iden_return_function(format, i + 1);
 				}
 			}
 			i++;

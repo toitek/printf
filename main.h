@@ -49,7 +49,7 @@ int prinnhex(va_list arguments, char *buf, unsigned int ibuff);
 int prinnupx(va_list arguments, char *buf, unsigned int ibuff);
 int prinsint(va_list arguments, char *buf, unsigned int ibuff);
 int (*get_print_function(const char *s, int index))(va_list, char *, unsigned int);
-int ev_print_function(const char *s, int ind);
+int iden_return_function(const char *s, int ind);
 unsigned int buffer_handler(char *buf, char c, unsigned int ibuff);
 int buffer_print(char *buf, unsigned int nbuf);
 char *binary_array(char *binary, long int int_in, int isneg, int limit);
