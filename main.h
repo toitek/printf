@@ -30,7 +30,7 @@ int print_oct(va_list arguments, char *buf, unsigned int ibuff);
 int print_hex(va_list arguments, char *buf, unsigned int ibuff);
 int print_upx(va_list arguments, char *buf, unsigned int ibuff);
 int print_usr(va_list arguments, char *buf, unsigned int ibuff);
-int print_add(va_list arguments, char *buf, unsigned int ibuff);
+int address_printer(va_list arguments, char *buf, unsigned int ibuff);
 int print_rev(va_list arguments, char *buf, unsigned int ibuff);
 int print_rot(va_list arguments, char *buf, unsigned int ibuff);
 int prinlint(va_list arguments, char *buf, unsigned int ibuff);
