@@ -4,11 +4,11 @@
  * print_str - writes the string to stdout
  * @arguments: input string
  * @buf: buffer pointer
- * @ibuf: index for buffer pointer
+ * @ibuff: index for buffer pointer
  * Return: On success 1.
  * designed by WANDHE and NGANGA
  */
-int print_str(va_list arguments, char *buf, unsigned int ibuf)
+int print_str(va_list arguments, char *buf, unsigned int ibuff)
 {
 	char *str;
 	unsigned int i;
@@ -18,10 +18,10 @@ int print_str(va_list arguments, char *buf, unsigned int ibuf)
 	if (str == NULL)
 	{
 		for (i = 0; nill[i]; i++)
-			ibuf = buffer_handler(buf, nill[i], ibuf);
+			ibuff = buffer_handler(buf, nill[i], ibuff);
 		return (6);
 	}
 	for (i = 0; str[i]; i++)
-		ibuf = buffer_handler(buf, str[i], ibuf);
+		ibuff = buffer_handler(buf, str[i], ibuff);
 	return (i);
 }

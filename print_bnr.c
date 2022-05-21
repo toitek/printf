@@ -4,11 +4,11 @@
  * print_bnr - prints decimal in binary
  * @arguments: input string
  * @buf: buffer pointer
- * @ibuf: index for buffer pointer
+ * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int print_bnr(va_list arguments, char *buf, unsigned int ibuf)
+int print_bnr(va_list arguments, char *buf, unsigned int ibuff)
 {
 	int int_input, count, i, first_one, isnegative;
 	char *binary;
@@ -17,7 +17,7 @@ int print_bnr(va_list arguments, char *buf, unsigned int ibuf)
 	isnegative = 0;
 	if (int_input == 0)
 	{
-		ibuf = buffer_handler(buf, '0', ibuf);
+		ibuff = buffer_handler(buf, '0', ibuff);
 		return (1);
 	}
 	if (int_input < 0)
@@ -34,7 +34,7 @@ int print_bnr(va_list arguments, char *buf, unsigned int ibuf)
 			first_one = 1;
 		if (first_one == 1)
 		{
-			ibuf = buffer_handler(buf, binary[i], ibuf);
+			ibuff = buffer_handler(buf, binary[i], ibuff);
 			count++;
 		}
 	}

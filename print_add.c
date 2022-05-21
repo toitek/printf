@@ -4,12 +4,12 @@
  * print_add - prints the address of an input variable
  * @arguments: input address.
  * @buf: buffer pointer.
- * @ibuf: index for buffer pointer
+ * @ibuff: index for buffer pointer
  *
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int print_add(va_list arguments, char *buf, unsigned int ibuf)
+int print_add(va_list arguments, char *buf, unsigned int ibuff)
 {
 	void *add;
 	long int int_input;
@@ -21,7 +21,7 @@ int print_add(va_list arguments, char *buf, unsigned int ibuf)
 	if (add == NULL)
 	{
 		for (i = 0; nill[i]; i++)
-			ibuf = buffer_handler(buf, nill[i], ibuf);
+			ibuff = buffer_handler(buf, nill[i], ibuff);
 		return (5);
 	}
 	int_input = (intptr_t)add;
@@ -35,15 +35,15 @@ int print_add(va_list arguments, char *buf, unsigned int ibuf)
 	binary = binary_array(binary, int_input, isnegative, 64);
 	hexadecimal = malloc(sizeof(char) * (16 + 1));
 	hexadecimal = hex_array(binary, hexadecimal, 0, 16);
-	ibuf = buffer_handler(buf, '0', ibuf);
-	ibuf = buffer_handler(buf, 'x', ibuf);
+	ibuff = buffer_handler(buf, '0', ibuff);
+	ibuff = buffer_handler(buf, 'x', ibuff);
 	for (first_digit = i = count = 0; hexadecimal[i]; i++)
 	{
 		if (hexadecimal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = buffer_handler(buf, hexadecimal[i], ibuf);
+			ibuff = buffer_handler(buf, hexadecimal[i], ibuff);
 			count++;
 		}
 	}

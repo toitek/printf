@@ -4,11 +4,11 @@
  * print_rev - writes the str in reverse
  * @arguments: input string
  * @buf: buffer pointer
- * @ibuf: index for buffer pointer
+ * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int print_rev(va_list arguments, char *buf, unsigned int ibuf)
+int print_rev(va_list arguments, char *buf, unsigned int ibuff)
 {
 	char *str;
 	unsigned int i;
@@ -19,7 +19,7 @@ int print_rev(va_list arguments, char *buf, unsigned int ibuf)
 	if (str == NULL)
 	{
 		for (i = 0; nill[i]; i++)
-			ibuf = buffer_handler(buf, nill[i], ibuf);
+			ibuff = buffer_handler(buf, nill[i], ibuff);
 		return (6);
 	}
 	for (i = 0; str[i]; i++)
@@ -27,7 +27,7 @@ int print_rev(va_list arguments, char *buf, unsigned int ibuf)
 	j = i - 1;
 	for (; j >= 0; j--)
 	{
-		ibuf = buffer_handler(buf, str[j], ibuf);
+		ibuff = buffer_handler(buf, str[j], ibuff);
 	}
 	return (i);
 }

@@ -4,10 +4,10 @@
  * non-printed chars
  * @arguments: input string
  * @buf: buffer pointer
- * @ibuf: index for buffer pointer
+ * @ibuff: index for buffer pointer
  * Return: number of chars printed
  */
-int print_usr(va_list arguments, char *buf, unsigned int ibuf)
+int print_usr(va_list arguments, char *buf, unsigned int ibuff)
 {
 	unsigned char *str;
 	char *hexadecimal, *binary;
@@ -20,17 +20,17 @@ int print_usr(va_list arguments, char *buf, unsigned int ibuf)
 	{
 		if (str[i] < 32 || str[i] >= 127)
 		{
-			ibuf = buffer_handler(buf, '\\', ibuf);
-			ibuf = buffer_handler(buf, 'x', ibuf);
+			ibuff = buffer_handler(buf, '\\', ibuff);
+			ibuff = buffer_handler(buf, 'x', ibuff);
 			op = str[i];
 			binary = binary_array(binary, op, 0, 32);
 			hexadecimal = hex_array(binary, hexadecimal, 1, 8);
-			ibuf = buffer_handler(buf, hexadecimal[6], ibuf);
-			ibuf = buffer_handler(buf, hexadecimal[7], ibuf);
+			ibuff = buffer_handler(buf, hexadecimal[6], ibuff);
+			ibuff = buffer_handler(buf, hexadecimal[7], ibuff);
 			sum += 3;
 		}
 		else
-			ibuf = buffer_handler(buf, str[i], ibuf);
+			ibuff = buffer_handler(buf, str[i], ibuff);
 	}
 	free(binary);
 	free(hexadecimal);

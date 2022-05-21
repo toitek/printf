@@ -3,11 +3,11 @@
  * print_unt - prints an unsigned int
  * @arguments: number to print
  * @buf: buffer pointer
- * @ibuf: index for buffer pointer
+ * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int print_unt(va_list arguments, char *buf, unsigned int ibuf)
+int print_unt(va_list arguments, char *buf, unsigned int ibuff)
 {
 	unsigned int int_in, int_temp, i, div;
 
@@ -21,7 +21,7 @@ int print_unt(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	for (i = 0; div > 0; div /= 10, i++)
 	{
-		ibuf = buffer_handler(buf, ((int_in / div) % 10) + '0', ibuf);
+		ibuff = buffer_handler(buf, ((int_in / div) % 10) + '0', ibuff);
 	}
 	return (i);
 }

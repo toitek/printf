@@ -3,11 +3,11 @@
  * prinnupx - prints number in uppercase hex
  * @arguments: input string
  * @buf: buffer pointer
- * @ibuf: index for buffer pointer
+ * @ibuff: index for buffer pointer
  * Return: number of chars printed
  * designed by WANDHE and NGANGA
  */
-int prinnupx(va_list arguments, char *buf, unsigned int ibuf)
+int prinnupx(va_list arguments, char *buf, unsigned int ibuff)
 {
 	int int_input, i, isnegative, count, first_digit;
 	char *hexadecimal, *binary;
@@ -16,7 +16,7 @@ int prinnupx(va_list arguments, char *buf, unsigned int ibuf)
 	isnegative = 0;
 	if (int_input == 0)
 	{
-		ibuf = buffer_handler(buf, '0', ibuf);
+		ibuff = buffer_handler(buf, '0', ibuff);
 		return (1);
 	}
 	if (int_input < 0)
@@ -24,8 +24,8 @@ int prinnupx(va_list arguments, char *buf, unsigned int ibuf)
 		int_input = (int_input * -1) - 1;
 		isnegative = 1;
 	}
-	ibuf = buffer_handler(buf, '0', ibuf);
-	ibuf = buffer_handler(buf, 'X', ibuf);
+	ibuff = buffer_handler(buf, '0', ibuff);
+	ibuff = buffer_handler(buf, 'X', ibuff);
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = binary_array(binary, int_input, isnegative, 32);
 	hexadecimal = malloc(sizeof(char) * (8 + 1));
@@ -36,7 +36,7 @@ int prinnupx(va_list arguments, char *buf, unsigned int ibuf)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = buffer_handler(buf, hexadecimal[i], ibuf);
+			ibuff = buffer_handler(buf, hexadecimal[i], ibuff);
 			count++;
 		}
 	}

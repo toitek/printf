@@ -4,12 +4,12 @@
  * print_rot - writes the str in ROT13
  * @arguments: input string
  * @buf: buffer pointer
- * @ibuf: index for buffer pointer
+ * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
 
-int print_rot(va_list arguments, char *buf, unsigned int ibuf)
+int print_rot(va_list arguments, char *buf, unsigned int ibuff)
 {
 	char alf[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
@@ -21,7 +21,7 @@ int print_rot(va_list arguments, char *buf, unsigned int ibuf)
 	if (str == NULL)
 	{
 		for (i = 0; nill[i]; i++)
-			ibuf = buffer_handler(buf, nill[i], ibuf);
+			ibuff = buffer_handler(buf, nill[i], ibuff);
 		return (6);
 	}
 	for (i = 0; str[i]; i++)
@@ -31,12 +31,12 @@ int print_rot(va_list arguments, char *buf, unsigned int ibuf)
 			if (str[i] == alf[j])
 			{
 				k = 1;
-				ibuf = buffer_handler(buf, rot[j], ibuf);
+				ibuff = buffer_handler(buf, rot[j], ibuff);
 				break;
 			}
 		}
 		if (k == 0)
-			ibuf = buffer_handler(buf, str[i], ibuf);
+			ibuff = buffer_handler(buf, str[i], ibuff);
 	}
 	return (i);
 }
