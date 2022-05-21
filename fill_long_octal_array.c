@@ -8,21 +8,21 @@
  * Return: binary array.
  * designed by WANDHE and NGANGA
  */
-char *fill_long_oct_array(char *bnr, char *oct)
+char *fill_long_octal_array(char *bnr, char *oct)
 {
-	int op, i, j, ioct, limit;
+	int opr, i, j, octal, limit;
 
 	oct[22] = '\0';
-	for (i = 63, ioct = 21; i >= 0; i--, ioct--)
+	for (i = 63, octal = 21; i >= 0; i--, octal--)
 	{
 		if (i > 0)
 			limit = 4;
 		else
 			limit = 1;
-		for (op = 0, j = 1; j <= limit; j *= 2, i--)
-			op = ((bnr[i] - '0') * j) + op;
+		for (opr = 0, j = 1; j <= limit; j *= 2, i--)
+			opr = ((bnr[i] - '0') * j) + opr;
 		i++;
-		oct[ioct] = op + '0';
+		oct[octal] = opr + '0';
 	}
 	return (oct);
 }
