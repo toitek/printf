@@ -8,7 +8,7 @@
  * Return: binary array.
  * designed by WANDHE and NGANGA
  */
-char *fill_octal_array(char *bnr, char *oct)
+char *octal_array(char *bnr, char *oct)
 {
 	int opr, i, j, octal, limit;
 

@@ -28,7 +28,7 @@ int prinhoct(va_list arguments, char *buf, unsigned int ibuf)
 	binary = malloc(sizeof(char) * (16 + 1));
 	binary = fill_binary_array(binary, int_input, isnegative, 16);
 	octal = malloc(sizeof(char) * (6 + 1));
-	octal = fill_short_oct_array(binary, octal);
+	octal = short_octal_array(binary, octal);
 	for (first_digit = i = count = 0; octal[i]; i++)
 	{
 		if (octal[i] != '0' && first_digit == 0)

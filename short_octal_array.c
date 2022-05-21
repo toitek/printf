@@ -8,7 +8,7 @@
  * Return: binary array.
  * designed by WANDHE and NGANGA
  */
-char *fill_short_oct_array(char *bnr, char *oct)
+char *short_octal_array(char *bnr, char *oct)
 {
 	int op, i, j, ioct, limit;
 
