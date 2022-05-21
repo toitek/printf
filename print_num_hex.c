@@ -16,7 +16,7 @@ int prinnhex(va_list arguments, char *buf, unsigned int ibuf)
 	isnegative = 0;
 	if (int_input == 0)
 	{
-		ibuf = handl_buf(buf, '0', ibuf);
+		ibuf = buffer_handler(buf, '0', ibuf);
 		return (1);
 	}
 	if (int_input < 0)
@@ -24,8 +24,8 @@ int prinnhex(va_list arguments, char *buf, unsigned int ibuf)
 		int_input = (int_input * -1) - 1;
 		isnegative = 1;
 	}
-	ibuf = handl_buf(buf, '0', ibuf);
-	ibuf = handl_buf(buf, 'x', ibuf);
+	ibuf = buffer_handler(buf, '0', ibuf);
+	ibuf = buffer_handler(buf, 'x', ibuf);
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = binary_array(binary, int_input, isnegative, 32);
 	hexadecimal = malloc(sizeof(char) * (8 + 1));
@@ -36,7 +36,7 @@ int prinnhex(va_list arguments, char *buf, unsigned int ibuf)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = handl_buf(buf, hexadecimal[i], ibuf);
+			ibuf = buffer_handler(buf, hexadecimal[i], ibuf);
 			count++;
 		}
 	}

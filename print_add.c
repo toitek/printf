@@ -21,7 +21,7 @@ int print_add(va_list arguments, char *buf, unsigned int ibuf)
 	if (add == NULL)
 	{
 		for (i = 0; nill[i]; i++)
-			ibuf = handl_buf(buf, nill[i], ibuf);
+			ibuf = buffer_handler(buf, nill[i], ibuf);
 		return (5);
 	}
 	int_input = (intptr_t)add;
@@ -35,15 +35,15 @@ int print_add(va_list arguments, char *buf, unsigned int ibuf)
 	binary = binary_array(binary, int_input, isnegative, 64);
 	hexadecimal = malloc(sizeof(char) * (16 + 1));
 	hexadecimal = hex_array(binary, hexadecimal, 0, 16);
-	ibuf = handl_buf(buf, '0', ibuf);
-	ibuf = handl_buf(buf, 'x', ibuf);
+	ibuf = buffer_handler(buf, '0', ibuf);
+	ibuf = buffer_handler(buf, 'x', ibuf);
 	for (first_digit = i = count = 0; hexadecimal[i]; i++)
 	{
 		if (hexadecimal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuf = handl_buf(buf, hexadecimal[i], ibuf);
+			ibuf = buffer_handler(buf, hexadecimal[i], ibuf);
 			count++;
 		}
 	}
