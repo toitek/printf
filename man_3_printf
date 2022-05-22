@@ -53,7 +53,7 @@
 		.BI "char *octal_array(char *bnr, char *oct);"
 		.BI "char *long_octal_array(char *bnr, char *oct);"
 		.BI "char *short_oct_array(char *bnr, char *oct);"
-		.BI "char *hex_array(char *bnr, char *hex, int isupp, int limit);"
+		.BI "char *char_array(char *bnr, char *hex, int isupp, int limit);"
 		.PP
 		.SH DESCRIPTION
 	The output function _printf() produce output according to a format.the function _printf converts the character strings that receives as argument and prints it on the standard output.

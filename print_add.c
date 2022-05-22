@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * address_printer - prints the address of an input variable
+ * print_add - prints the address of an input variable
  * @arguments: input address.
  * @buf: buffer pointer.
  * @ibuff: index for buffer pointer
@@ -9,7 +9,7 @@
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int address_printer(va_list arguments, char *buf, unsigned int ibuff)
+int print_add(va_list arguments, char *buf, unsigned int ibuff)
 {
 	void *add;
 	long int int_input;
