@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * prinpint - print integer with plus symbol
+ * plus_int - print integer with plus symbol
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed
  * designed by WANDHE and NGANGA
  */
-int prinpint(va_list arguments, char *buf, unsigned int ibuff)
+int plus_int(va_list arguments, char *buf, unsigned int ibuff)
 {
 	int int_input;
 	unsigned int int_in, int_temp, i, div;

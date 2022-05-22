@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rot - writes the str in ROT13
+ * rot_print - writes the str in ROT13
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
@@ -9,7 +9,7 @@
  * designed by WANDHE and NGANGA
  */
 
-int print_rot(va_list arguments, char *buf, unsigned int ibuff)
+int rot_print(va_list arguments, char *buf, unsigned int ibuff)
 {
 	char alf[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";

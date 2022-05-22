@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * print_oct - prints decimal number in octal
+ * dec_oct - prints decimal number in octal
  * @arguments: input number
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int print_oct(va_list arguments, char *buf, unsigned int ibuff)
+int dec_oct(va_list arguments, char *buf, unsigned int ibuff)
 {
 	int int_input, i, isnegative, count, first_digit;
 	char *octal, *binary;

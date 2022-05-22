@@ -1,16 +1,16 @@
 #include "main.h"
 /**
- * prinnoct - print the number in octal begining with zero
+ * upper_hex - prints number in uppercase hex
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed
  * designed by WANDHE and NGANGA
  */
-int prinnoct(va_list arguments, char *buf, unsigned int ibuff)
+int upper_hex(va_list arguments, char *buf, unsigned int ibuff)
 {
 	int int_input, i, isnegative, count, first_digit;
-	char *octal, *binary;
+	char *hexadecimal, *binary;
 
 	int_input = va_arg(arguments, int);
 	isnegative = 0;
@@ -25,21 +25,22 @@ int prinnoct(va_list arguments, char *buf, unsigned int ibuff)
 		isnegative = 1;
 	}
 	ibuff = buffer_handler(buf, '0', ibuff);
+	ibuff = buffer_handler(buf, 'X', ibuff);
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = binary_array(binary, int_input, isnegative, 32);
-	octal = malloc(sizeof(char) * (11 + 1));
-	octal = octal_array(binary, octal);
-	for (first_digit = i = count = 0; octal[i]; i++)
+	hexadecimal = malloc(sizeof(char) * (8 + 1));
+	hexadecimal = char_array(binary, hexadecimal, 1, 8);
+	for (first_digit = i = count = 0; hexadecimal[i]; i++)
 	{
-		if (octal[i] != '0' && first_digit == 0)
+		if (hexadecimal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuff = buffer_handler(buf, octal[i], ibuff);
+			ibuff = buffer_handler(buf, hexadecimal[i], ibuff);
 			count++;
 		}
 	}
 	free(binary);
-	free(octal);
-	return (count + 1);
+	free(hexadecimal);
+	return (count + 2);
 }
