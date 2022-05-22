@@ -23,7 +23,7 @@ int iden_return_function(const char *s, int ind)
 		{"li", long_int_print},
 		{"ld", long_int_print},
 		{"lu", prinlunt},
-		{"lo", prinloct},
+		{"lo", octal_long},
 		{"lx", long_hex_print},
 		{"lX", prinlupx},
 		{"hi", prinhint},
