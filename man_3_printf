@@ -19,7 +19,7 @@
 		.BI "int print_str(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int integer_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int binary_print(va_list arguments, char *buf, unsigned int ibuff);"
-		.BI "int print_unt(va_list arguments, char *buf, unsigned int ibuff);"
+		.BI "int unsign_int(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int dec_oct(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int dec_hex(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int print_upx(va_list arguments, char *buf, unsigned int ibuff);"

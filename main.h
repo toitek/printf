@@ -25,7 +25,7 @@ int char_print(va_list arguments, char *buf, unsigned int ibuff);
 int print_str(va_list arguments, char *buf, unsigned int ibuff);
 int integer_print(va_list arguments, char *buf, unsigned int ibuff);
 int binary_print(va_list arguments, char *buf, unsigned int ibuff);
-int print_unt(va_list arguments, char *buf, unsigned int ibuff);
+int unsign_int(va_list arguments, char *buf, unsigned int ibuff);
 int dec_oct(va_list arguments, char *buf, unsigned int ibuff);
 int dec_hex(va_list arguments, char *buf, unsigned int ibuff);
 int print_upx(va_list arguments, char *buf, unsigned int ibuff);
