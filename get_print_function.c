@@ -23,7 +23,7 @@ int (*get_print_function(const char *s, int index))(va_list, char *, unsigned in
 		{"li", prinlint},
 		{"ld", prinlint},
 		{"lu", prinlunt},
-		{"lo", prinloct},
+		{"lo", octal_long},
 		{"lx", long_hex_print},
 		{"lX", prinlupx},
 		{"hi", prinhint},

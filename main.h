@@ -35,7 +35,7 @@ int print_rev(va_list arguments, char *buf, unsigned int ibuff);
 int print_rot(va_list arguments, char *buf, unsigned int ibuff);
 int prinlint(va_list arguments, char *buf, unsigned int ibuff);
 int prinlunt(va_list arguments, char *buf, unsigned int ibuff);
-int prinloct(va_list arguments, char *buf, unsigned int ibuff);
+int octal_long(va_list arguments, char *buf, unsigned int ibuff);
 int long_hex_print(va_list arguments, char *buf, unsigned int ibuff);
 int prinlupx(va_list arguments, char *buf, unsigned int ibuff);
 int prinhint(va_list arguments, char *buf, unsigned int ibuff);
