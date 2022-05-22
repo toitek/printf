@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * hex_print - prints a decimal in hexadecimal
+ * hex_print - print number in hex begining with zero
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
@@ -24,6 +24,8 @@ int hex_print(va_list arguments, char *buf, unsigned int ibuff)
 		int_input = (int_input * -1) - 1;
 		isnegative = 1;
 	}
+	ibuff = buffer_handler(buf, '0', ibuff);
+	ibuff = buffer_handler(buf, 'x', ibuff);
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = binary_array(binary, int_input, isnegative, 32);
 	hexadecimal = malloc(sizeof(char) * (8 + 1));
@@ -40,5 +42,5 @@ int hex_print(va_list arguments, char *buf, unsigned int ibuff)
 	}
 	free(binary);
 	free(hexadecimal);
-	return (count);
+	return (count + 2);
 }

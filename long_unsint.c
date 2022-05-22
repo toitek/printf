@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * prinlunt - prints a long unsigned integer
+ * long_unsint - prints a long unsigned integer
  * @arguments: number to print
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int prinlunt(va_list arguments, char *buf, unsigned int ibuff)
+int long_unsint(va_list arguments, char *buf, unsigned int ibuff)
 {
 	unsigned long int int_in, int_temp, i, div;
 

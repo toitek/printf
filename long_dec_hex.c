@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * prinlupx - prints a long decimal in hexadecimal
+ * long_dec_hex - prints a long decimal in hexadecimal
  * @arguments: The character to print
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed
  * designed by WANDHE and NGANGA
  */
-int prinlupx(va_list arguments, char *buf, unsigned int ibuff)
+int long_dec_hex(va_list arguments, char *buf, unsigned int ibuff)
 {
 	long int int_input, i, isnegative, count, first_digit;
 	char *hexadecimal, *binary;
