@@ -9,11 +9,11 @@
  */
 int octal_print(va_list arguments, char *buf, unsigned int ibuff)
 {
-	int int_input, i, isnegative, count, first_digit;
+	int int_input, i, isneg, count, first_digit;
 	char *octal, *binary;
 
 	int_input = va_arg(arguments, int);
-	isnegative = 0;
+	isneg = 0;
 	if (int_input == 0)
 	{
 		ibuff = buffer_handler(buf, '0', ibuff);
@@ -22,11 +22,11 @@ int octal_print(va_list arguments, char *buf, unsigned int ibuff)
 	if (int_input < 0)
 	{
 		int_input = (int_input * -1) - 1;
-		isnegative = 1;
+		isneg = 1;
 	}
 	ibuff = buffer_handler(buf, '0', ibuff);
 	binary = malloc(sizeof(char) * (32 + 1));
-	binary = binary_array(binary, int_input, isnegative, 32);
+	binary = binary_array(binary, int_input, isneg, 32);
 	octal = malloc(sizeof(char) * (11 + 1));
 	octal = octal_array(binary, octal);
 	for (first_digit = i = count = 0; octal[i]; i++)
