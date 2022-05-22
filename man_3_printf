@@ -15,7 +15,7 @@
 		.PP
 		.BI "int _printf(const char *format, ...);"
 		.BI "int print_prg(va_list __attribute__((unused)), char *, unsigned int);"
-		.BI "int print_chr(va_list arguments, char *buf, unsigned int ibuff);"
+		.BI "int char_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int print_str(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int print_int(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int binary_print(va_list arguments, char *buf, unsigned int ibuff);"
