@@ -33,7 +33,7 @@ int print_usr(va_list arguments, char *buf, unsigned int ibuff);
 int address_printer(va_list arguments, char *buf, unsigned int ibuff);
 int print_rev(va_list arguments, char *buf, unsigned int ibuff);
 int print_rot(va_list arguments, char *buf, unsigned int ibuff);
-int prinlint(va_list arguments, char *buf, unsigned int ibuff);
+int long_int_print(va_list arguments, char *buf, unsigned int ibuff);
 int prinlunt(va_list arguments, char *buf, unsigned int ibuff);
 int prinloct(va_list arguments, char *buf, unsigned int ibuff);
 int long_hex_print(va_list arguments, char *buf, unsigned int ibuff);

@@ -27,7 +27,7 @@
 		.BI "int address_printer(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int print_rev(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int print_rot(va_list arguments, char *buf, unsigned int ibuff);"
-		.BI "int prinlint(va_list arguments, char *buf, unsigned int ibuff);"
+		.BI "int long_int_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int prinlunt(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int prinloct(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int long_hex_print(va_list arguments, char *buf, unsigned int ibuff);"

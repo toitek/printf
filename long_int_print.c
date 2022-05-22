@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * prinlint - prints a long integer
+ * long_int_print - prints a long integer
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int prinlint(va_list arguments, char *buf, unsigned int ibuff)
+int long_int_print(va_list arguments, char *buf, unsigned int ibuff)
 {
 	long int int_input;
 	unsigned long int int_in, int_temp, i, div, isneg;
