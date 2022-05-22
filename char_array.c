@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * hex_array - writes the character c to stdout
+ * char_array - writes the character c to stdout
  *
  * @bnr: array where is stored the binary.
  * @hex: array where is stored the hexadecimal.
@@ -10,15 +10,15 @@
  * Return: binary array.
  * designed by WANDHE and NGANGA
  */
-char *hex_array(char *bnr, char *hex, int isupp, int limit)
+char *char_array(char *bnr, char *hex, int isupp, int limit)
 {
-	int op, i, j, toletter;
+	int op, i, j, toltr;
 
 	hex[limit] = '\0';
 	if (isupp)
-		toletter = 55;
+		toltr = 55;
 	else
-		toletter = 87;
+		toltr = 87;
 	for (i = (limit * 4) - 1; i >= 0; i--)
 	{
 		for (op = 0, j = 1; j <= 8; j *= 2, i--)
@@ -27,7 +27,7 @@ char *hex_array(char *bnr, char *hex, int isupp, int limit)
 		if (op < 10)
 			hex[i / 4] = op + 48;
 		else
-			hex[i / 4] = op + toletter;
+			hex[i / 4] = op + toltr;
 	}
 	return (hex);
 }

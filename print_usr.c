@@ -24,7 +24,7 @@ int print_usr(va_list arguments, char *buf, unsigned int ibuff)
 			ibuff = buffer_handler(buf, 'x', ibuff);
 			op = str[i];
 			binary = binary_array(binary, op, 0, 32);
-			hexadecimal = hex_array(binary, hexadecimal, 1, 8);
+			hexadecimal = char_array(binary, hexadecimal, 1, 8);
 			ibuff = buffer_handler(buf, hexadecimal[6], ibuff);
 			ibuff = buffer_handler(buf, hexadecimal[7], ibuff);
 			sum += 3;

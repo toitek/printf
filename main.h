@@ -56,6 +56,6 @@ char *binary_array(char *binary, long int int_in, int isneg, int limit);
 char *octal_array(char *bnr, char *oct);
 char *long_octal_array(char *bnr, char *oct);
 char *short_oct_array(char *bnr, char *oct);
-char *hex_array(char *bnr, char *hex, int isupp, int limit);
+char *char_array(char *bnr, char *hex, int isupp, int limit);
 
 #endif
