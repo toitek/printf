@@ -21,7 +21,7 @@
 		.BI "int binary_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int print_unt(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int print_oct(va_list arguments, char *buf, unsigned int ibuff);"
-		.BI "int print_hex(va_list arguments, char *buf, unsigned int ibuff);"
+		.BI "int hex_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int print_upx(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int print_usr(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int address_printer(va_list arguments, char *buf, unsigned int ibuff);"

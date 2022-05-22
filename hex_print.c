@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * print_hex - prints a decimal in hexadecimal
+ * hex_print - prints a decimal in hexadecimal
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed
  * designed by WANDHE and NGANGA
  */
-int print_hex(va_list arguments, char *buf, unsigned int ibuff)
+int hex_print(va_list arguments, char *buf, unsigned int ibuff)
 {
 	int int_input, i, isnegative, count, first_digit;
 	char *hexadecimal, *binary;

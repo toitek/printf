@@ -27,7 +27,7 @@ int print_int(va_list arguments, char *buf, unsigned int ibuff);
 int binary_print(va_list arguments, char *buf, unsigned int ibuff);
 int print_unt(va_list arguments, char *buf, unsigned int ibuff);
 int print_oct(va_list arguments, char *buf, unsigned int ibuff);
-int print_hex(va_list arguments, char *buf, unsigned int ibuff);
+int hex_print(va_list arguments, char *buf, unsigned int ibuff);
 int print_upx(va_list arguments, char *buf, unsigned int ibuff);
 int print_usr(va_list arguments, char *buf, unsigned int ibuff);
 int address_printer(va_list arguments, char *buf, unsigned int ibuff);
