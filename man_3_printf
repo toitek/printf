@@ -1,7 +1,7 @@
-.\" Manpage forprint_f.
-		.THprint_f 3 " 2022 MAY 20"
-					 "1.0"
-					 "Program Manual forprint_f"
+.\" Manpage for _printf.
+		.THE _printf 3 " 2022 MAY 20"
+					   "1.0"
+					   "Program Manual for _printf"
 		.SH NAME
 			_printf -
 	formatted output conversion and print data.
@@ -56,7 +56,7 @@
 		.BI "char *char_array(char *bnr, char *hex, int isupp, int limit);"
 		.PP
 		.SH DESCRIPTION
-	The output functionprint_f() produce output according to a format.the functionprint_f converts the character strings that receives as argument and prints it on the standard output.
+	The output function _printf() produce output according to a format.the function _printf converts the character strings that receives as argument and prints it on the standard output.
 		.SH RETURN VALUE
 	Returns the number of all the characters printed,
 	excluding the NULL byte used to end output to strings.
@@ -101,8 +101,8 @@ ring,
 	_printf(''% s'', ''Hello'')
 
 		_printf(''Hello contains % d characters'', length);
-
-	length = _printf(''Hello '');
+	_printf
+		length = _printf(''Hello '');
 
 	return (0);
 }
