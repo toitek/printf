@@ -1,19 +1,20 @@
 #include "main.h"
 /**
- * prinhoct - prints long decimal number in octal
- * @arguments: input number
+ *short_upx_print - prints a short decimal in hexadecimal
+ * @arguments: The character to print
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
- * Return: number of chars printed.
+ * Return: number of chars printed
  * designed by WANDHE and NGANGA
  */
-int prinhoct(va_list arguments, char *buf, unsigned int ibuff)
+int short_upx_print(va_list arguments, char *buf, unsigned int ibuff)
 {
 	short int int_input, i, isnegative, count, first_digit;
-	char *octal, *binary;
+	char *hexadecimal, *binary;
 
 	int_input = va_arg(arguments, int);
 	isnegative = 0;
+
 	if (int_input == 0)
 	{
 		ibuff = buffer_handler(buf, '0', ibuff);
@@ -27,19 +28,22 @@ int prinhoct(va_list arguments, char *buf, unsigned int ibuff)
 
 	binary = malloc(sizeof(char) * (16 + 1));
 	binary = binary_array(binary, int_input, isnegative, 16);
-	octal = malloc(sizeof(char) * (6 + 1));
-	octal = short_oct_array(binary, octal);
-	for (first_digit = i = count = 0; octal[i]; i++)
+	hexadecimal = malloc(sizeof(char) * (4 + 1));
+	hexadecimal = char_array(binary, hexadecimal, 1, 4);
+
+	for (first_digit = i = count = 0; hexadecimal[i]; i++)
 	{
-		if (octal[i] != '0' && first_digit == 0)
+		if (hexadecimal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuff = buffer_handler(buf, octal[i], ibuff);
+			ibuff = buffer_handler(buf, hexadecimal[i], ibuff);
 			count++;
 		}
 	}
+
 	free(binary);
-	free(octal);
+	free(hexadecimal);
+
 	return (count);
 }

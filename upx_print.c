@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * print_upx - prints a decimal in hexadecimal
+ * upx_print - prints a decimal in hexadecimal
  * @arguments: The character to print
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed
  * designed by WANDHE and NGANGA
  */
-int print_upx(va_list arguments, char *buf, unsigned int ibuff)
+int upx_print(va_list arguments, char *buf, unsigned int ibuff)
 {
 	int int_input, i, isnegative, count, first_digit;
 	char *hexadecimal, *binary;

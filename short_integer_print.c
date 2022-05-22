@@ -1,27 +1,28 @@
 #include "main.h"
 /**
- * prinsint - prints int begining with space
+ * short_integer_print - prints a short integer
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
- * Return: number of chars printed
+ * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int prinsint(va_list arguments, char *buf, unsigned int ibuff)
+int short_integer_print(va_list arguments, char *buf, unsigned int ibuff)
 {
-	int int_input;
-	unsigned int int_in, int_temp, i, div;
+	short int int_input;
+	unsigned short int int_in, int_temp, i, div, isneg;
 
 	int_input = va_arg(arguments, int);
+	isneg = 0;
 	if (int_input < 0)
 	{
 		int_in = int_input * -1;
 		ibuff = buffer_handler(buf, '-', ibuff);
+		isneg = 1;
 	}
 	else
 	{
 		int_in = int_input;
-		ibuff = buffer_handler(buf, ' ', ibuff);
 	}
 	int_temp = int_in;
 	div = 1;
@@ -34,5 +35,5 @@ int prinsint(va_list arguments, char *buf, unsigned int ibuff)
 	{
 		ibuff = buffer_handler(buf, ((int_in / div) % 10) + '0', ibuff);
 	}
-	return (i + 1);
+	return (i + isneg);
 }

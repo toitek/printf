@@ -1,7 +1,7 @@
-.\" Manpage for _printf.
-		.TH _printf 3 " 2022 MAY 20"
-					  "1.0"
-					  "Program Manual for _printf"
+.\" Manpage forprint_f.
+		.THprint_f 3 " 2022 MAY 20"
+					 "1.0"
+					 "Program Manual forprint_f"
 		.SH NAME
 			_printf -
 	formatted output conversion and print data.
@@ -13,17 +13,17 @@
 		.BI "#include <stdarg.h>"
 		.BI "#include <unistd.h>"
 		.PP
-		.BI "int _printf(const char *format, ...);"
+		.BI "  int _printf(const char *format, ...);"
 		.BI "int char_c(va_list __attribute__((unused)), char *, unsigned int);"
 		.BI "int char_print(va_list arguments, char *buf, unsigned int ibuff);"
-		.BI "int print_str(va_list arguments, char *buf, unsigned int ibuff);"
+		.BI "int string_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int integer_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int binary_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int unsign_int(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int dec_oct(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int dec_hex(va_list arguments, char *buf, unsigned int ibuff);"
-		.BI "int print_upx(va_list arguments, char *buf, unsigned int ibuff);"
-		.BI "int print_usr(va_list arguments, char *buf, unsigned int ibuff);"
+		.BI "int upx_print(va_list arguments, char *buf, unsigned int ibuff);"
+		.BI "int usr_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int address_printer(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int rev_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int rot_print(va_list arguments, char *buf, unsigned int ibuff);"
@@ -35,13 +35,13 @@
 		.BI "int prinhint(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int prinhunt(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int prinhoct(va_list arguments, char *buf, unsigned int ibuff);"
-		.BI "int prinhhex(va_list arguments, char *buf, unsigned int ibuff);"
+		.BI "int short_hexadecimal_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int prinhupx(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int plus_int(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int octal_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int hex_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int upper_hex(va_list arguments, char *buf, unsigned int ibuff);"
-		.BI "int prinsint(va_list arguments, char *buf, unsigned int ibuff);"
+		.BI "int space_int_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.PP
 		.BI "int (*get_print_function(const char *s, int index))(va_list, char *, unsigned int);"
 		.BI "int ev_print_func(const char *s, int index);"
@@ -56,7 +56,7 @@
 		.BI "char *char_array(char *bnr, char *hex, int isupp, int limit);"
 		.PP
 		.SH DESCRIPTION
-	The output function _printf() produce output according to a format.the function _printf converts the character strings that receives as argument and prints it on the standard output.
+	The output functionprint_f() produce output according to a format.the functionprint_f converts the character strings that receives as argument and prints it on the standard output.
 		.SH RETURN VALUE
 	Returns the number of all the characters printed,
 	excluding the NULL byte used to end output to strings.

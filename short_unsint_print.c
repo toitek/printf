@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * prinhunt - prints a short unsigned integer
+ * short_unsint_print - prints a short unsigned integer
  * @arguments: number to print
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int prinhunt(va_list arguments, char *buf, unsigned int ibuff)
+int short_unsint_print(va_list arguments, char *buf, unsigned int ibuff)
 {
 	unsigned short int int_in, int_temp, i, div;
 

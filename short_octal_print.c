@@ -1,16 +1,16 @@
 #include "main.h"
 /**
- * prinhhex - prints a short decimal in hexadecimal
- * @arguments: input string
+ * short_octal_print - prints long decimal number in octal
+ * @arguments: input number
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
- * Return: number of chars printed
+ * Return: number of chars printed.
  * designed by WANDHE and NGANGA
  */
-int prinhhex(va_list arguments, char *buf, unsigned int ibuff)
+int short_octal_print(va_list arguments, char *buf, unsigned int ibuff)
 {
 	short int int_input, i, isnegative, count, first_digit;
-	char *hexadecimal, *binary;
+	char *octal, *binary;
 
 	int_input = va_arg(arguments, int);
 	isnegative = 0;
@@ -27,19 +27,19 @@ int prinhhex(va_list arguments, char *buf, unsigned int ibuff)
 
 	binary = malloc(sizeof(char) * (16 + 1));
 	binary = binary_array(binary, int_input, isnegative, 16);
-	hexadecimal = malloc(sizeof(char) * (4 + 1));
-	hexadecimal = char_array(binary, hexadecimal, 0, 4);
-	for (first_digit = i = count = 0; hexadecimal[i]; i++)
+	octal = malloc(sizeof(char) * (6 + 1));
+	octal = short_oct_array(binary, octal);
+	for (first_digit = i = count = 0; octal[i]; i++)
 	{
-		if (hexadecimal[i] != '0' && first_digit == 0)
+		if (octal[i] != '0' && first_digit == 0)
 			first_digit = 1;
 		if (first_digit)
 		{
-			ibuff = buffer_handler(buf, hexadecimal[i], ibuff);
+			ibuff = buffer_handler(buf, octal[i], ibuff);
 			count++;
 		}
 	}
 	free(binary);
-	free(hexadecimal);
+	free(octal);
 	return (count);
 }

@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * print_usr - prints a string and values of
+ * usr_print - prints a string and values of
  * non-printed chars
  * @arguments: input string
  * @buf: buffer pointer
  * @ibuff: index for buffer pointer
  * Return: number of chars printed
  */
-int print_usr(va_list arguments, char *buf, unsigned int ibuff)
+int usr_print(va_list arguments, char *buf, unsigned int ibuff)
 {
 	unsigned char *str;
 	char *hexadecimal, *binary;
