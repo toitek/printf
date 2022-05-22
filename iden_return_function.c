@@ -9,7 +9,7 @@
 int iden_return_function(const char *s, int ind)
 {
 	print_a pt[] = {
-		{"c", print_chr},
+		{"c", char_print},
 		{"s", print_str},
 		{"i", print_int},
 		{"d", print_int},
