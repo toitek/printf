@@ -1,7 +1,6 @@
 # Printf project
-> The printf project is a collaboration between Wandhe OYOYO and Sylvester Nganga (***Software Engineering students at ALX***)
 > A function named **_printf** imitates the actual ***printf*** command located in the <stdio.h> library.
-- It contains some of the basic features and functions found in the manual 3 of printf.
+> It contains some of the basic features and functions found in the manual 3 of printf.
 ## Requirements
 
 -  Code must comply with the Betty style and document checks.
@@ -13,6 +12,6 @@
 - Authorized functions and macros: ..* write (man 2 write) ..* malloc (man 3 malloc) ..* free (man 3 free) ..* va_start (man 3 va_start) ..* va_end (man 3 va_end) ..* va_copy (man 3 va_copy) ..* va_arg (man 3 va_arg)
 
 ## Collaborators
-- Wandhe OYOYO
-- Sylvester Ng'ang'a
+- Wandhe OYOYO [Github](https://github.com/toitek)
+- Sylvester Ng'ang'a [Github](https://github.com/Sylvester254)
 >(***Software Engineering students at ALX***)
