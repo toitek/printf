@@ -48,7 +48,7 @@ int octal_print(va_list arguments, char *buf, unsigned int ibuff);
 int hex_print(va_list arguments, char *buf, unsigned int ibuff);
 int upper_hex(va_list arguments, char *buf, unsigned int ibuff);
 int space_int_print(va_list arguments, char *buf, unsigned int ibuff);
-int (*get_print_function(const char *s, int index))(va_list, char *, unsigned int);
+int (*get_print(const char *s, int index))(va_list, char *, unsigned int);
 int iden_return_function(const char *s, int ind);
 unsigned int buffer_handler(char *buf, char c, unsigned int ibuff);
 int buffer_print(char *buf, unsigned int nbuf);

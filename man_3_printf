@@ -43,7 +43,7 @@
 		.BI "int upper_hex(va_list arguments, char *buf, unsigned int ibuff);"
 		.BI "int space_int_print(va_list arguments, char *buf, unsigned int ibuff);"
 		.PP
-		.BI "int (*get_print_function(const char *s, int index))(va_list, char *, unsigned int);"
+		.BI "int (*get_print(const char *s, int index))(va_list, char *, unsigned int);"
 		.BI "int ev_print_func(const char *s, int index);"
 		.PP
 		.BI "unsigned int buffer_handler(char *buf, char c, unsigned int ibuff);"
